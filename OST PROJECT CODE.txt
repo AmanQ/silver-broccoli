@@ -1,0 +1,515 @@
+print("WELCOME TO VARIOUS TYPES OF CALCULATORS :) ")
+print("IN THIS WE HAVE\n 1.AGE\t 2.BMI\t 3.DISCOUNT\t 4.CURRENCY\t 5.LOAN\t 6.COMPLEX\t 7.SPLITBILL")
+choice=int(input("CHOOSE YOUR OPTION "))
+
+if choice ==1:
+
+    def date(a):
+
+        if a > 31:
+
+            print("ERRROR ENTER A VALID DATE !!!")
+
+            exit()
+        else:
+            return a
+
+
+    def month(number):
+
+        if number == 1:
+            print("January")
+        elif number == 2:
+            print("February")
+        elif number == 3:
+            print("March")
+        elif number == 4:
+            print("April")
+        elif number == 5:
+            print("May")
+        elif number == 6:
+            print("June")
+        elif number == 7:
+            print("July")
+        elif number == 8:
+            print("August")
+        elif number == 9:
+            print("September")
+        elif number == 10:
+            print("October")
+        elif number == 11:
+            print("November")
+        elif number == 12:
+            print("December")
+        else:
+            print("ENTER A VALID MONTH NUMBER !!!")
+            exit()
+
+
+    def year(c):
+
+        if c <= 2019:
+            print("you are ", (2019 - c), "years ")
+        else:
+            print("you are ", (2019 - c), "years ")
+            print("HOW DID YOU TRAVEL TIME ? DID YOU JUST PROVE EINSTEIN WRONG ")
+
+
+    print("enter your birth date : ")
+    a = int(input())
+    date(a)
+
+    print("Enter your birth month number :")
+    number = int(input())
+    month(number)
+
+    print("ENTER YOUR BIRTH Year YOU WERE BORN IN ")
+    c = int(input())
+    year(c)
+
+    print("SO YOU WERE BORN 0N ", a, "/", number, "/", c)
+    print("you have lived ", (2019 - c) * 365, "days", int((2019 - c) * 12), "months", int(((2019 - c) * 365) / 7),
+          "weeks approximately")
+
+
+elif choice==2:
+    print("WELCOME TO BODY MASS INDEX CALCULATOR. ")
+    print("DESCRIPTION : ")
+    print("There are 3 catogories in BMI \n1.UNDER WEIGHT\n2.NORMAL\n3.OVER WEIGHT\n")
+    print("To calculate BMI you need to enter your weight and height")
+
+    print("Enter your Weight in Kg: ")
+    a = float(input())
+
+    print("Enter your height in meters :")
+    b = float(input())
+
+    c = (a / (b * b))
+
+    if (c <= 18.5):
+
+        print("YOU ARE UNDER WEIGHT :(")
+        print("TIP : TRY TO EAT MORE HEALTHY FOOD ")
+    elif (c <= 25.0):
+        print("your BMI is normal")
+    elif c:
+        print("you are over weight .")
+        print("TIP : TRY TO CONTROL YOUR CALORIES INTAKE ")
+
+    print("your BMI is : ", c)
+
+    print("BMI SCALE : ")
+    print("0--------------18.5---------------25.0-----------------40")
+    print(" UNDER WEIGHT         NORMAL             OVER WEIGHT")
+
+
+elif choice==3:
+    print("WELCOME TO DISCOUNT CALCULATOR !! ")
+    print("Enter the original price of the product : ")
+    a = int(input())
+    print("ENTER HOW MUCH % to discount :")
+    b = int(input())
+
+    c = b / 100
+
+    d = c * a
+
+    f = a - d
+
+    print("THE DISCOUNTED PRICE OF THE PRODUCT IS :", f)
+    print("You saved ", (a - f), "amount")
+
+
+elif choice==4:
+    print("Welcome to CURRENCY CONVERTER")
+    print("WE CONVERT INTO 5 CURRENCIES ")
+    print("1.INR(INDIA) 2.USD(AMERICA) 3.EUR(EURO) 4.CZK(CZECH) 5.KWD(KUWAIT)")
+
+    number = int(input("select your currency :"))
+
+    change = int(input("select the currency you want to convert to :"))
+
+    c = int(input("enter the amount you want to convert : "))
+
+
+    def currency():
+        if number == 1 and change == 2:
+            d = 0.015 * c
+            print(d, "$ is the converted amount")
+            return d
+
+        elif number == 1 and change == 3:
+            d = 0.013 * c
+            print(d, " € is the converted amount")
+            return d
+
+        elif number == 1 and change == 4:
+            d = 0.33 * c
+            print(d, "Kč is the converted amount")
+            return d
+
+        elif number == 1 and change == 5:
+            d = 0.0044 * c
+            print(d, " KD is the converted amount")
+            return d
+
+        elif number == 2 and change == 1:
+            d = 68.64 * c
+
+            print(d, "INR is the converted amount")
+            return d
+
+        elif number == 2 and change == 3:
+            d = 0.88 * c
+            print(d, "€ is the converted amount")
+            return d
+
+        elif number == 2 and change == 4:
+            d = 22.58 * c
+            print(d, "Kč is the converted amount")
+            return d
+
+        elif number == 2 and change == 5:
+            d = 0.30 * c
+            print(d, "KD is the converted amount")
+            return d
+        elif number == 3 and change == 1:
+            d = 77.87 * c
+            print(d, "INR is the converted amount")
+            return d
+
+        elif number == 3 and change == 2:
+            d = 1.13 * c
+            print(d, "$ is the converted amount")
+            return d
+
+        elif number == 3 and change == 4:
+            d = 25.62 * c
+            print(d, "Kč is the converted amount")
+            return d
+
+        elif number == 3 and change == 5:
+            d = 0.34 * c
+            print(d, "KD is the converted amount")
+            return d
+
+        elif number == 4 and change == 1:
+            d = 3.04 * c
+            print(d, "INR is the converted amount")
+            return d
+
+        elif number == 4 and change == 2:
+            d = 0.044 * c
+            print(d, "$ is the converted amount")
+            return d
+
+        elif number == 4 and change == 3:
+            d = 0.039 * c
+            print(d, "€ is the converted amount")
+            return d
+
+        elif number == 4 and change == 5:
+            d = 0.013 * c
+            print(d, "KD is the converted amount")
+            return d
+
+        elif number == 5 and change == 1:
+            d = 225.93 * c
+            print(d, "INR is the converted amount")
+            return d
+
+        elif number == 5 and change == 2:
+            d = 3.29 * c
+            print(d, "$ is the converted amount")
+            return d
+
+        elif number == 5 and change == 3:
+            d = 2.90 * c
+            print(d, "€ is the converted amount")
+            return d
+
+        elif number == 5 and change == 4:
+            d = 74.33 * c
+            print(d, "Kč is the converted amount")
+            return d
+        else:
+            print("enter correct options ")
+            exit()
+
+
+    currency()
+
+
+elif choice ==5:
+    a = int(input("Enter principal amount : "))
+    b = int(input("Enter Interest %"))
+    c = int(input("Enter loan tenure in months"))
+
+    max = 50
+    time = c / 12
+    rate = b / 100
+
+    interest = (a * rate * time) / c
+
+
+    def pay():
+        if b <= max:
+            for i in range(c):
+                d = (a / c) + interest
+            print(d, "RS you have to pay every month.")
+        if b > max:
+            print("interest is over limit !!!")
+            exit()
+
+
+    pay()
+    print("Total interest you have to pay for", c, "month is : ", (a * rate * time))
+    print("total amount you have to pay after", c, "months is", a + (a * rate * time))
+
+
+elif choice ==6:
+    # Calculator.
+    def cal():
+        print("This is a calculator.")
+        print(
+            "You choose a number, then a sign and then the last number. The signs can be plus, minus, times, **, division and modulos.")
+
+        num1 = int(input("Number 1 --> "))
+        sign = input("Sign --> ")
+        num2 = int(input("Last number --> "))
+
+        if sign == "+" or sign == "-" or sign == "*" or sign == "/":
+            print("You want to calculate %s%s%s." % (num1, sign, num2))
+
+        if sign == "+":
+            result = int(num1) + int(num2)
+            print("The result is %s." % (result))
+
+        elif sign == "-":
+            result = int(num1) - int(num2)
+            print("The result is %s." % (result))
+
+        elif sign == "*":
+            result = num1 * num2
+            print("The result is %s." % (result))
+
+        elif sign == "/":
+            result = num1 / num2
+            print("The result is %s." % (result))
+
+        elif sign == "**":
+            result = num1 ** num2
+            print("The result is %s." % (result))
+
+        elif sign == "%":
+            result = num1 % num2
+            print("The result is %s." % (result))
+
+        else:
+            print("Something went wrong.")
+
+
+    # Square root function.
+    def sqr():
+        from math import sqrt
+        answer = input("Enter a number you want to find the square root of: ")
+
+        def cals():
+            result = sqrt(int(answer))
+            print("The result is %s." % (result))
+
+        print("We will now find the square root of you number.")
+
+        if len(answer) > 0 and answer.isnumeric:
+            cals()
+
+        elif answer.isalpha:
+            print("You can only use numbers.")
+
+        elif len(answer) == 0:
+            print("You must write something.")
+
+        else:
+            print("Something went wrong.")
+
+
+    # Vector length.
+    def length_vector():
+        print("Enter the length of the x coordinate and the length of the y coodinate.")
+        x, y = input("x and y coordinate: ").split()
+        print("Your vector is (%s, %s)" % (x, y))
+
+        from math import sqrt
+        length = sqrt(int(x) ** 2) + sqrt(int(y) ** 2)
+        print("The length of the vector is %s." % (length))
+
+
+    # Cos, Sin and Tan.
+    def deg():
+        degr, nummer = input("Enter cos, sin or tan and then the number: ").split()
+        degr = degr.lower()
+        import math
+        if degr == "cos":
+            result = math.cos(math.radians(int(nummer)))
+            print("The result is %s" % (result))
+
+        elif degr == "sin":
+            result = math.sin(math.radians(int(nummer)))
+            print("The result is %s" % (result))
+
+        elif degr == "tan":
+            result = math.tan(math.radians(int(nummer)))
+            print("The result is %s" % (result))
+
+        else:
+            print("Something went wrong.")
+
+
+    # if function.
+    def t_if():
+        if choice == "calculator":
+            cal()
+
+        elif choice == "square root":
+            sqr()
+
+        elif choice == "vector length":
+            length_vector()
+
+        elif choice == "line slope":
+            calc()
+
+        elif choice == "degrees":
+            deg()
+
+        elif choice == "vector":
+            vector()
+
+        else:
+            print("Something went wrong. Make sure you spelled correctly.")
+
+
+    # Vector
+    def vector():
+        decide = input("Choose 'Vector projection', 'determinant' 'Vector degrees' or 'Dot product': ").lower()
+
+        if decide == "vector projection":
+            proj()
+
+        elif decide == "dot product":
+            dot()
+
+        elif decide == "vector degrees":
+            vec_deg()
+
+        elif decide == "determinant":
+            det()
+
+
+    # Derteminant
+    def det():
+        a1, a2 = input("Enter a1 and a2: ").split()
+        b1, b2 = input("Enter b1 and b2: ").split()
+        a1 = int(a1)
+        a2 = int(a2)
+        b1 = int(b1)
+        b2 = int(b2)
+
+        determinant = (a1 * b2) - (a2 * b1)
+        print("The areal area of the parallellogram is %s." % (determinant))
+        lop = input("Do you want to calculate the are of the triangle -->").lower()
+
+        if lop == "yes":
+            result = determinant * 0.5
+            print("The are area of the triangle is %s." % (result))
+
+
+    # Dot product
+    def dot():
+        a1, a2 = input("Enter a1 and a2: ").split()
+        b1, b2 = input("Enter b1 and b2: ").split()
+        a1 = int(a1)
+        a2 = int(a2)
+        b1 = int(b1)
+        b2 = int(b2)
+
+        result = (a1 * b1) + (a2 * b2)
+        print("The dot product is %s." % (result))
+
+
+    # Vector degrees
+    def vec_deg():
+        from math import sqrt
+        a1, a2 = input("Enter a1 and a2: ").split()
+        b1, b2 = input("Enter b1 and b2: ").split()
+        a1 = int(a1)
+        a2 = int(a2)
+        b1 = int(b1)
+        b2 = int(b2)
+
+        dot = (a1 * b1) + (a2 * b2)
+        length = (sqrt(a1) + sqrt(a2)) * (sqrt(b1) + sqrt(b2))
+        degs = dot / length
+        print("The result is %s." % (degs))
+
+
+    # Vector proj
+    def proj():
+        def prik_produkt():
+            return (a1 * b1) + (a2 * b2)
+
+        def vec_length():
+            from math import sqrt
+            return (sqrt(b1 ** 2) + sqrt(b2 ** 2)) ** 2
+
+        a1, a2 = input("Enter a1 and a2: ").split()
+        b1, b2 = input("Enter b1 and b2: ").split()
+        a1 = int(a1)
+        a2 = int(a2)
+        b1 = int(b1)
+        b2 = int(b2)
+
+        def res():
+            one = (prik_produkt() / vec_length()) * b1
+            two = (prik_produkt() / vec_length()) * b2
+            print("The result is (%s, %s)." % (one, two))
+
+        res()
+
+
+    # Line slope
+    def calc():
+        x, y = input("Enter x and y coordinates: ").split()
+        x2, y2 = input("Enter the second x and y coordinates: ").split()
+        ys = int(y2) - int(y)
+        xs = int(x2) - int(x)
+        result = int(ys) / int(xs)
+        print("The line slope er %s." % (result))
+
+
+    print("Enter what type of calculations you want.")
+    print("You can choose 'Square root', 'Vector length', 'Calculator', 'Vector', 'Degrees' and 'Line slope'.")
+
+    choice = input("Enter here: ").lower()
+
+    if len(choice) > 0:
+        t_if()
+
+    else:
+        print("Something went wrong. Make sure you spelled it correct.")
+
+
+
+elif choice==7:
+    print("WELCOME TO SPLIT BILL CALCULATOR .")
+    a = int(input("enter the total amount : "))
+    b = int(input("Enter number of people : "))
+
+    c = (a / b)
+
+    print("Everyone has to pay Rs", c)
+
+else:
+
+    print("enter a valid choice ")
+    exit()
